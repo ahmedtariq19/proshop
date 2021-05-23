@@ -18,7 +18,7 @@ export const protect = asyncHandler(async (req, res, next) => {
     }
   }
   if (!token) {
-    res.send("401");
+    res.status(401);
     throw new Error("Unauthorized access, no token");
   }
 });
